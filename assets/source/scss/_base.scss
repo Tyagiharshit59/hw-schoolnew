@@ -1,0 +1,191 @@
+
+/**
+_header.scss
+SCSS file for general CSS.
+@file _base.scss
+@path /assets/scss/_base.scss
+@version 2019-10-09
+*/
+
+/* ! GENERAL START */
+/**
+    This section is use for reset CSS.
+*/
+
+*,
+* * {
+    margin: 0;
+    padding: 0; 
+}
+
+body {
+    font-family:$base-font;
+    line-height: normal;
+    background-color:$white;
+ 
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+    transition: color $trans-med ease 0s, box-shadow $trans-med ease 0s;
+    outline-offset: 1px;
+
+    @include hover-focus {
+        color: $secondary;
+        text-decoration: none;
+    }
+
+    @include focus {
+        outline: none;
+
+    }
+}
+
+:focus {
+    /*outline-color: $very-dark-grey;*/
+}
+
+a[href^="tel:"],
+a[href^="fax:"] {
+    cursor: text;
+    /*color: $dark-navy;*/
+
+    @include hover-focus {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+a[href^="mailto:"] {
+    text-decoration: underline;
+
+    @include hover-focus {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+// And undo these styles for placeholder links/named anchors (without href)
+// which have not been made explicitly keyboard-focusable (without tabindex).
+// It would be more straightforward to just use a[href] in previous block, but that
+// causes specificity issues in many other styles that are too complex to fix.
+a:not([href]):not([tabindex]) {
+    color: inherit;
+    text-decoration: none;
+
+    @include hover-focus {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+img {
+    margin: 0;
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    border: 0;
+}
+
+.icon {
+    display: inline-block;
+    line-height: 0;
+}
+
+svg {
+    &:not(:root) {
+        overflow: hidden; // Hide the overflow in IE
+    }
+
+    max-width: 100%;
+    height: initial;
+
+    .fill {
+        transition: fill $trans-med ease 0s;
+    }
+
+    .fill-stroke {
+        transition: fill $trans-med ease 0s, stroke $trans-med ease 0s;
+    }
+}
+
+.section2{
+    padding-top: 6%;
+}
+.cover-bg2{  
+    background-size: cover;
+    background-repeat: no-repeat;}
+.cover-bg{  
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;}
+.navbar-dark {
+    .navbar-nav{
+       li{
+          .nav-link{
+            @include media-breakpoint-up(sm){
+               @include hover-focus {
+                   color: $white;
+               }
+            }
+               @include media-breakpoint-up(lg){
+                @include hover-focus {
+                    color: $primary;
+                }  
+               }
+            }
+        }
+    }
+}
+
+.btn{
+    @include hover-focus{
+        background-color: $white;
+        color: $primary;
+        border-color:$white
+    }
+}
+
+    .card{
+        @include hover-focus{
+        background-color: $primary;
+        color: $white;
+        }
+    }
+
+.new-card{
+    @include hover-focus-active{
+        background: #F9F9FF;
+        color: $primary;
+        box-shadow: -6px 9px 20px 20px #f6efef;
+        transition: all .2s ease-in;
+        border-radius: 90px 0 90px;
+        border: none;
+    }
+}
+
+
+h1, h2, h3, h4, h5, h6{
+    font-family: $secondary-font;
+    font-weight: 700;
+}
+p{
+    font-size: 1rem;
+}
+
+
+.section-top-area{
+    max-width: 950px;
+    margin: 0 auto 80px;
+    font-size:1.4375rem;
+    h2{
+        font-size:3rem;
+    }
+
+}
+ 

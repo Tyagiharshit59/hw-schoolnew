@@ -1,0 +1,554 @@
+/**
+_home.scss
+SCSS file for home page sections.
+@file _home.scss
+@path /assets/scss/_home.scss
+@version 2019-10-18
+*/
+/* section css */
+.section{
+    @include media-breakpoint-up(sm) {  
+        padding: 82px  0;
+      }
+    @include media-breakpoint-up(lg) {  
+        padding: 162px 0;
+      }
+}
+
+/* banner css */
+.banner{
+    background-image:url(#{$img-path}/baner.png);
+    position: $relative; 
+    &:before {
+        content: "";
+        position: $absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($black, 0.5);
+        height: $height;
+        width: $width;
+    }
+    
+    @include media-breakpoint-up(sm) {  
+        max-width: $width; 
+      }
+    @include media-breakpoint-up(lg) {  
+    max-width: $width; 
+    min-height: calc(100vh - 109px);
+    }
+    .container{
+        .row{
+            .text-area{
+                position: $relative;
+                text-align: left;
+                font-size: 1rem;
+                width: $width;
+                padding: 2rem;
+                @include media-breakpoint-up(sm) {
+                    top: 0;
+                    max-width: 500px;
+                    font-size: small;
+                    text-align: $center;
+                    
+                }
+                @include media-breakpoint-up(lg) {
+                    top: 38%;
+                    max-width: 500px;
+                    text-align: left;
+                }
+                .banner-heading{
+                    color:$white;
+                    max-width: 725px;
+                }
+                .banner-para{
+                    color: $white;
+                    max-width: 651px;
+                }
+            
+            }
+            .banner-img{
+                position: $relative;
+                .image-area{
+                    width: $width;
+                    height: auto;
+                    position: $absolute;
+                    display: block;
+                    top: 12px;
+                    bottom: 0;
+                }
+            }
+        }
+    }   
+}
+
+
+// superintendent css
+.superintendent{
+    position: $relative;
+    .circel{
+        position: $absolute;
+        max-width: $max-width;
+        top: 90px;
+        left: 247px;
+    }
+    &__img{
+        .figure-caption{
+            position: $relative;
+            border: 1px solid $fig-color;
+            width: 50%;
+            height: 42px;
+            margin-left: 25%;
+            margin-top: -10%;
+            background-color:$fig-color;
+            overflow-y: overlay;
+            padding-top: 10px;
+            color: $black;
+        }
+    } 
+    .superintendent__right{
+        position: $relative;
+        &__img{
+            position: $absolute;
+            right: -4px;
+            top: -25px;
+            bottom: 0px;
+            img{
+                max-width: 126.41px;
+            }
+        }
+        &__text{
+            p{
+                font-size: 14px;
+            }
+        }
+    }  
+}
+
+// mission-vision css
+.mission-vision{
+    background: $primary;
+    position: $relative;
+    &:before {
+        content: "";
+        position: $absolute;
+        top: -23px;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 40px;
+        background-color: #ffff;
+        border-radius: 100%; 
+    }
+    
+    .mission{
+        position: $relative;
+        &__circle{
+            position: $absolute;
+            max-width: 180px;
+            left: 40px;
+            top: 70px;
+        }
+        &__dot{
+            position: $absolute;
+            max-width: 180.78px;
+            max-width: 110.78px;
+            bottom: -100px;
+            left: 40px;
+        }
+        &__img{
+            text-align: $center;
+            width: $width;
+            position: $relative;
+            top: -30px;
+             img{
+                width: 70%;
+            }
+        }
+    }
+    
+    .vision{
+        position: $relative;
+        &__circel{
+            position: $absolute;
+            right: 0;
+            max-width: 250px;
+            top: 0;
+        } 
+        &__dot{
+            position: $absolute;
+            max-width: 200px;
+            right: 0;
+            bottom: 122px;
+            
+        }
+        &__img{
+            text-align: $center;
+            width: $width;
+            position: $relative;
+            bottom: -35px;
+            z-index:1;
+            img{
+                width: 70%;
+            }
+         }
+         &__content{
+            @include media-breakpoint-up(lg) {
+                max-width: 500px;
+                margin-left: auto;
+              }
+         }
+    }
+    .mission__vision__content{
+        width: inherit;
+        position: $relative;
+        color: $white;
+        font-size: 16px;
+        top: 45px;
+    }
+}
+.mission-vision::after {
+    content: "";
+    position: $absolute;
+    bottom: -20px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: #ffff;
+    border-radius: 100%; 
+}
+
+
+
+.bg1{
+    background:$secondary;
+}
+
+
+
+
+.card{
+    transition: all 0.2s ease-in;
+    background: $white; 
+    background: #fff;
+    max-width: 300px;
+    margin: 0 auto 45px;
+    .card-body{ 
+        .icon{
+            background:$primary;
+            line-height: 0;
+            padding: 1rem;
+            max-width: 50px;
+            max-height: 50px;
+        }
+    }  
+}
+
+.item{
+    .card{
+        .card-body{
+            .card-text{
+                text-align: $center;
+                font-size: 1rem;
+            }
+            p{
+                font-size: 0.75rem;
+                margin: 0 auto;
+                padding: 4px;
+            }
+        }
+
+    }
+}
+.fa-arrow-right {
+    content: "\f061 ";
+    padding: 10px;
+    color: $primary;
+}
+.fa-arrow-left {
+    content: "\f060";
+    color: $primary;
+}
+
+
+
+
+.card{
+    .card-body{
+        .card-top{
+            width: 100%;
+            display: inline-flex;
+            flex-direction: row;
+            img{
+                width: fit-content;
+                height: fit-content;
+            }
+            .card-left{
+                margin: 0 auto;
+                padding: 7px;
+                
+            }
+        }
+        .card-text{
+            font-size: 12px;
+            margin: 4px auto;
+        }
+    }
+}
+
+.owl-dots{
+    text-align: $center;
+}
+.owl-carousel button.owl-dot {
+    background: 0 0;
+    color: whitesmoke !important;
+    border: 1px solid silver !important;
+    width: 1%;
+    height: 14px;
+    border-radius: 8px;
+    margin-left: 4px;
+}
+
+
+.more__informatin{
+    background-color:$secondary;
+    position: $relative; 
+    &:before {
+        content: "";
+        position: $absolute;
+        left: 0;
+        top: -11%;
+        right: 0;
+        width: 100%;
+        background-color: #fff;
+        height: 50px;
+        border-radius: 100%;
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom:-14px;
+        width: 100%;
+        background-color: #fff;
+        height: 30px;
+        border-radius: 100%;
+    }
+    .body-part{
+        max-width: 700px;
+        margin: 0 auto;
+        .features{
+            .fa-book{
+                width: 80px;
+                height: 80px;
+                line-height: 1.6;
+                text-align: center;
+                border-radius: 50%;
+                font-size: 3rem;
+                color:$primary;
+                background-color: #fff;
+            }
+        }
+    }
+    &__top{
+        max-width: 950px;
+        margin: 0px auto 30px;
+        font-size: 1.4375rem;
+        h3{
+            color: $primary;      
+        }
+    }
+
+}
+
+.new-card{
+    position: $relative;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    background-color:$white;
+    background-clip: border-box;
+    max-width: 300px;
+    margin: 0 auto 2rem;
+
+    .card-body{
+        text-align: $center;
+        .card-title{
+            text-align: $center;
+            padding: 10px;
+        }
+        .card-subtitle{
+            color: $shadow-color;
+        }
+        .card-text{
+            @extend .card-title
+        }
+        
+    }
+}
+
+.circle_percent {
+    font-size:10rem;
+    width:10rem;
+    height:10rem;
+    position: $relative; 
+    background: $secondary; 
+    color: $primary;
+    border-radius:50%;
+    overflow:hidden; 
+    display:inline-block;
+    .circle_inner{
+        position: $absolute; 
+        left: 0; 
+        top: 0; 
+        width: 1em; 
+        height: 1em; 
+        clip:rect(0 1em 1em .5em);
+        .round_per{
+            position: $absolute; 
+            left: 0; 
+            top: 0; 
+            width: 1em; 
+            height: 1em; 
+            background: $primary; 
+            clip:rect(0 1em 1em .5em); 
+            transform:rotate(180deg); 
+            transition:1.05s;
+        }
+    }
+    .circle_inbox {
+        position: $absolute; 
+        top: 10px; 
+        left: 10px; 
+        right: 10px; 
+        bottom: 10px; 
+        background: $secondary; 
+        z-index:3; 
+        border-radius: 50%;
+        .percent_text {
+            position: $absolute; 
+            font-size: 36px; 
+            left: 50%; 
+            top: 50%; 
+            transform: translate(-50%,-50%); 
+            z-index: 3;
+        }
+
+    }
+
+}
+
+.green{
+    background:#70CE88 !important;
+}
+.light-green{
+background: #ECF9F0 !important;
+color: #70CE88;
+}
+.yellow{
+    background: #FFBA49 !important;
+}
+.light-yellow{
+    background: #FFF5E6 !important;
+   color:#FFBA49 ;
+}
+.percent_more {
+    .circle_inner {
+        clip:rect(0 .5em 1em 0em);
+    }
+    &:after {
+        content:'';
+        position: absolute; 
+        left: .5em; 
+        top:0em; 
+        right: 0; 
+        bottom: 0; 
+        background: $primary; 
+    }
+}
+
+
+.our-students{
+    background-image: linear-gradient($secondary, $primary);
+    position: $relative;
+    .section-shape__top{
+        position: $absolute;
+        top: -4px;
+        left: 0;
+        right: 0;
+    }
+    .section-shape__bottom{
+        position: $relative;
+        bottom: -50px;
+        left: 0;
+        right: 0;
+    }
+}
+
+ 
+
+footer{
+    background-color: $primary;
+    position: $relative;
+    &:before {
+        content: "";
+        position: $absolute;
+        left: 0;
+        top: -5%;
+        right: 0;
+        width: 100%;
+        background-color: #fff;
+        height: 46px;
+        border-radius: 100%;
+    }
+    p{
+        @include hover-focus{
+            text-decoration: underline;
+        }
+    }
+    .footer-logo{
+        display: inline-flex;
+        position: $absolute;
+        left: 7rem;
+        top: 2rem;
+       @include media-breakpoint-up(sm) {
+            left: 23%;
+            top: 2%;
+        }
+        @include media-breakpoint-up(md){
+            left: 5rem;
+            top: 2rem;
+        }
+        @include media-breakpoint-up(lg) {
+            left: 5%;
+            top: 7%;
+        }
+
+    }
+    
+}
+
+
+.input{
+    input[type=file]::file-selector-button{
+        border: 2px solid green;
+        padding: .2em .4em;
+        border-radius: .2em;
+        background-color: green;
+        transition: 1s;
+        color: white;
+
+    }
+}
+
+
+
+
+
+
+
+
+

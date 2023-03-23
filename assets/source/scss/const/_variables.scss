@@ -1,0 +1,98 @@
+/**_variables.scss
+SCSS file for all varibles.
+@file _variables.scss
+@path /assets/scss/_variables.scss
+@version 2019-10-09
+*/
+/* Font family */
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url('../fonts/CircularStd-Black.eot');
+    src: url('../fonts/CircularStd-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CircularStd-Black.woff2') format('woff2'),
+        url('../fonts/CircularStd-Black.woff') format('woff'),
+        url('../fonts/CircularStd-Black.svg#CircularStd-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url('../fonts/CircularStd-Bold.eot');
+    src: url('../fonts/CircularStd-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CircularStd-Bold.woff2') format('woff2'),
+        url('../fonts/CircularStd-Bold.woff') format('woff'),
+        url('../fonts/CircularStd-Bold.svg#CircularStd-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url('../fonts/CircularStd-Medium.eot');
+    src: url('../fonts/CircularStd-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CircularStd-Medium.woff2') format('woff2'),
+        url('../fonts/CircularStd-Medium.woff') format('woff'),
+        url('../fonts/CircularStd-Medium.svg#CircularStd-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Circular Std Book';
+    src: url('../fonts/CircularStd-Book.eot');
+    src: url('../fonts/CircularStd-Book.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CircularStd-Book.woff2') format('woff2'),
+        url('../fonts/CircularStd-Book.woff') format('woff'),
+        url('../fonts/CircularStd-Book.svg#CircularStd-Book') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+$base-font: 'Roboto Condensed', sans-serif;
+$secondary-font: "Circular Std";
+$body-bg: #eeeeee;
+
+
+/* Colors variables */
+$white: #FFFFFF !default;
+$black:#000;
+$primary:#841E25;
+$fig-color:#ffba49;
+$secondary:#E8D5D4;
+$shadow-color:#E4E4E4;
+/* Transition speeds variables */
+$trans-slow: 0.6s;
+$trans-med: 0.4s;
+$trans-fast: 0.2s;
+
+/* Box shadow variables */
+$normal-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+/* postion variables */
+$absolute:absolute;
+$relative:relative;
+/* max-width variables */
+$max-width:161.58px;
+$width:100%;
+$height:100%;
+$auto-height:auto;
+$center:center;
+/* Images path variable */
+$img-path:"../images";
+/* font-size variabel for peraghrap */
+$primary-sige:1.375rem;
+/* font-size variabel for headings */
+
+
+
+/*@import "node_modules/bootstrap/scss/bootstrap";*/

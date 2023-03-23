@@ -1,0 +1,188 @@
+/*
+_header.scss SCSS
+file for all Header/Navigation Section elements.
+@file _header.scss
+@path /assets/scss/_header.scss
+@version 2019-10-09
+*/
+
+/* Css for wp admin bar is actived end */
+.header {
+    @include media-breakpoint-up(sm) {}
+    @include media-breakpoint-up(md) {}
+    @include media-breakpoint-up(lg) {}
+    @include media-breakpoint-up(xl) {}
+}
+
+.topbar {
+    background: $primary;
+    font-size: 14px; 
+    .container-fluid{
+        justify-content: end;
+    }
+    .social-links{
+        position: $relative;
+        left: -43rem;
+    }
+
+}
+
+.navbar-nav{
+    position: $relative;
+    align-items: baseline;
+    left: 10px;
+    .nav-item{
+        .search{
+            border: 1px solid $primary;
+            border-radius: 13px;
+             .fa-search{
+                padding: 4px;
+            }
+        
+        }
+    }
+}
+.navbar{
+    .search-mobile__menu{
+        color: $black;
+        font-size: 1.5rem;
+        border: 1px solid;
+        line-height: 1.2;
+        border-radius: 30px;
+        width: 50px;
+        position: $absolute;
+        right: 90px;
+        .fa-search{
+            position: $relative;
+            right: -12px;
+        }
+    }
+}
+.menu-dropdown{
+    position: $absolute;
+    width: $width;
+    right: 0;
+    top: 65px;
+    background: $primary;
+    z-index: 1;
+    @include media-breakpoint-up(sm) {
+        right: 0;
+        top: 65px;
+        background: $primary;
+        z-index: 1;
+        padding: 1rem;
+       
+    }
+    @include media-breakpoint-up(md){
+        right: 0;
+        top: 65px;
+        background: $primary;
+        z-index: 1; 
+    }
+    @include media-breakpoint-up(lg){
+        position: $relative;
+        background: $white;
+        top: 0;
+        right: 0;
+    }
+
+}
+
+.navbar-brand span{
+    margin: 3px;
+    font-size: smaller;
+    padding: 10px;
+    font-style: inherit;
+    color: $black;
+}
+.navbar-dark .navbar-nav .nav-link{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all .4s ease;
+    color: $white;
+    @include media-breakpoint-up(sm) {
+        padding: 3px 8px;  
+        font-size: 17px;
+    }
+    @include media-breakpoint-up(md) {
+        padding: 3px 8px;  
+        font-size: 20px;
+    }
+    @include media-breakpoint-up(lg){
+        padding: 0 8px;
+        font-size: 15px;
+        color: $black;
+    }
+    
+
+}
+.dropdown-menu{
+    @include media-breakpoint-up(sm){
+        left: 0;
+        right: 0;
+        width: 190px;
+    } 
+    @include media-breakpoint-up(md){
+        left: 0;
+        right: 0;
+        width: 190px;
+    }
+}
+.dropdown-item{
+    font-size: 15px;
+    font-weight: 600;
+    transition: all .4s ease;
+
+}
+.dropdown-item:hover{
+    background-color: $primary;
+    color: $white;
+}
+.dropdown-item:active{
+    text-decoration:none;
+    background-color: $primary;
+}
+
+
+
+.btn-primary{
+    color: $white;
+    background-color: $primary;
+    border-color: $primary;
+    @include border-font;
+}
+
+.btn-light {
+    color: $black;
+    background-color: $white;
+    border-color: $white;
+    @include border-font;
+}
+.btn-danger {
+    color: #fff;
+    background-color: $primary;
+    border-color: $white;
+    @include border-font;
+}
+
+.search-form-wrapper {
+    position: $absolute;
+    left: 0;
+    right: 0;
+    padding: 20px 15px;
+    top: 115px;
+    background:$primary;
+    z-index: 1;
+    & span{
+        font-size: x-large;
+        padding: 6px;
+        border: 1px solid $white;
+        background: $white;
+        position: $relative;
+    }
+}
+
+
+ 
